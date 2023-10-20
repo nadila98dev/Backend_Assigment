@@ -8,7 +8,6 @@
     "start": "nodemon src/index.js",
     "dev": "node src/index.js",
     "migrateknex": "knex migrate:latest --knexfile src/knexmodel/knexfile.js"
-    
   },
   "keywords": [
     "product",

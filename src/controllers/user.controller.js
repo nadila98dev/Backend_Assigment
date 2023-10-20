@@ -1,16 +1,18 @@
-const knex = require("knex")
+const knex = require('../knexmodel/knex')
 
 const CreateUser = async (req, res) => {
     try{
         const body = req.body
-   
-        const inserData = await knex('users').insert({
-            fisrtname: body.fisrtname,
+        // console.log(body)
+
+        const insertData = await knex('users').insert({
+            firstname: body.firstname,
             lastname: body.lastname,
             email: body.email,
             username: body.username,
             password: body.password
         })
+       
 
         return res.status(201).send('sukses')
 
